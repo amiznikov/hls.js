@@ -136,12 +136,12 @@ function getAliasesForLightDist() {
     });
   }
 
-  if (!addAltAudioSupport) {
-    aliases = Object.assign(aliases, {
-      './controller/audio-track-controller': './empty.js',
-      './controller/audio-stream-controller': './empty.js',
-    });
-  }
+  // if (!addAltAudioSupport) {
+  //   aliases = Object.assign(aliases, {
+  //     './controller/audio-track-controller': './empty.js',
+  //     './controller/audio-stream-controller': './empty.js',
+  //   });
+  // }
 
   return aliases;
 }
