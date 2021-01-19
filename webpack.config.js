@@ -8,14 +8,14 @@ const importHelper = require('@babel/helper-module-imports');
 const env = process.env;
 
 const addSubtitleSupport = !!env.SUBTITLE || !!env.USE_SUBTITLES;
-const addAltAudioSupport = !!env.ALT_AUDIO || !!env.USE_ALT_AUDIO;
+const addAltAudioSupport = true;
 const addEMESupport = !!env.EME_DRM || !!env.USE_EME_DRM;
 
 const createDefinePlugin = (type) => {
   const buildConstants = {
     __VERSION__: JSON.stringify(pkgJson.version),
     __USE_SUBTITLES__: JSON.stringify(type === 'main' || addSubtitleSupport),
-    __USE_ALT_AUDIO__: JSON.stringify(type === 'main' || addAltAudioSupport),
+    __USE_ALT_AUDIO__: true,
     __USE_EME_DRM__: JSON.stringify(type === 'main' || addEMESupport),
   };
   return new webpack.DefinePlugin(buildConstants);

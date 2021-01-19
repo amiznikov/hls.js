@@ -1027,8 +1027,8 @@ var hlsDefaultConfig = _objectSpread(_objectSpread({
   subtitleStreamController:  false ? undefined : undefined,
   subtitleTrackController:  false ? undefined : undefined,
   timelineController:  false ? undefined : undefined,
-  audioStreamController:  false ? undefined : undefined,
-  audioTrackController:  false ? undefined : undefined,
+  audioStreamController:  true ? _controller_audio_stream_controller__WEBPACK_IMPORTED_MODULE_1__["default"] : undefined,
+  audioTrackController:  true ? _controller_audio_track_controller__WEBPACK_IMPORTED_MODULE_2__["default"] : undefined,
   emeController:  false ? undefined : undefined
 });
 
