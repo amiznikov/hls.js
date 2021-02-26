@@ -1405,7 +1405,7 @@ if (demoConfig) {
 }
 
 var hlsjsDefaults = {
-  debug: true,
+  debug: false,
   enableWorker: true,
   lowLatencyMode: true,
   liveBackBufferLength: 60 * 1.5
@@ -1646,9 +1646,10 @@ function loadSelectedStream() {
   if (!Hls.isSupported()) {
     handleUnsupported();
     return;
-  }
+  } // url = $('#streamURL').val();
 
-  url = $('#streamURL').val();
+
+  url = 'https://zhopa.gcdn.co/videos/676_gY5alQ2LUATbRebt_s_keyserver.gvideo.co/index-svod480n-v1-a1.m3u8';
   setupGlobals();
   hideCanvas();
 

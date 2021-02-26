@@ -148,6 +148,7 @@ export type HlsConfig = {
   minAutoBitrate: number;
   loader: { new (confg: HlsConfig): Loader<LoaderContext> };
   xhrSetup?: (xhr: XMLHttpRequest, url: string) => void;
+  keyRequest?: any,
 
   // Alt Audio
   audioStreamController?: typeof AudioStreamController;

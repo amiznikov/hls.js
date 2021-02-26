@@ -76,7 +76,7 @@ export default class KeyLoader implements ComponentAPI {
       }
       const Loader = config.loader;
       const fragLoader = (frag.loader = this.loaders[type] = new Loader(
-        config
+        { ...config, ...config.keyRequest}
       ) as Loader<FragmentLoaderContext>);
       this.decrypturl = uri;
       this.decryptkey = null;
